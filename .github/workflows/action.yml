@@ -34,7 +34,9 @@ jobs:
 
     - name: Terraform Init
       id: init
-      run: terraform init /myterraform/
+      run: |
+        cd myterraform/
+        terraform init
 
     - name: Terraform Plan
       id: plan
