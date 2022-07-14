@@ -1,10 +1,8 @@
 resource "aws_instance" "ec2demo" {
-  count = local.create && !var.create_spot_instance ? 1 : 0
-
+  
+  count = var.create_ec2 ? 1 : 0
   ami                  = var.ami
   instance_type        = var.instance_type
-  cpu_core_count       = var.cpu_core_count
-  cpu_threads_per_core = var.cpu_threads_per_core
   hibernation          = var.hibernation
 
   user_data                   = var.user_data
