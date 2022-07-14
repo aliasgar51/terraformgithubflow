@@ -1,5 +1,5 @@
-variable "create" {
-  description = "Whether to create an instance"
+variable "create_ec2" {
+  description = "Whether to create an instance or not"
   type        = bool
   default     = true
 }
@@ -97,7 +97,7 @@ variable "instance_initiated_shutdown_behavior" {
 variable "instance_type" {
   description = "The type of instance to start"
   type        = string
-  default     = "t3.micro"
+  default     = ""
 }
 
 variable "ipv6_address_count" {
