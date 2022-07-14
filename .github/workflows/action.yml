@@ -23,6 +23,3 @@ jobs:
       with:
         role-to-assume: arn:aws:iam::446963233070:role/github-oidc-role
         aws-region: us-east-1
-    - name: Copy files to the test website with the AWS CLI
-      run: |
-        aws s3 sync . s3://testlogbuckett
