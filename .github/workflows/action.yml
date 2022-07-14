@@ -49,4 +49,4 @@ jobs:
       id: apply
       run: | 
         cd myterraform/
-        terraform apply
+        terraform apply -auto-approve
