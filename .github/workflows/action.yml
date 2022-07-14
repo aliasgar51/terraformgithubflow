@@ -44,3 +44,9 @@ jobs:
         cd myterraform/
         terraform plan
       continue-on-error: true
+	
+    - name: Terraform Apply
+      id: plan
+      run: | 
+        cd myterraform/
+        terraform apply
