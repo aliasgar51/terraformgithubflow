@@ -31,10 +31,12 @@ jobs:
       uses: hashicorp/setup-terraform@v2
       with:
         terraform_version: 1.1.5
+
     - name: Terraform Init
       id: init
-      run: terraform init
+      run: terraform init /myterraform/
+
     - name: Terraform Plan
       id: plan
-      run: terraform plan -no-color
+      run: terraform plan 
       continue-on-error: true
