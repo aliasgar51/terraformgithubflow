@@ -1,0 +1,21 @@
+jobs:
+  deploy:
+    name: EC2 test
+    # These permissions are needed to interact with GitHub's OIDC Token endpoint.
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+    - name: Configure AWS credentials from Test account
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        role-to-assume: arn:aws:iam::446963233070:role/github-oidc-role
+        aws-region: us-east-1
+    - name: Copy files to the test website with the AWS CLI
+      run: |
+        aws s3 sync . s3://testlogbuckett
+
+
+    
+
+  
