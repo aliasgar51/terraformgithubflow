@@ -13,7 +13,7 @@ variable "name" {
 variable "ami" {
   description = "ID of AMI to use for the instance"
   type        = string
-  default     = "aami-0cff7528ff583bf9a"
+  default     = "ami-0cff7528ff583bf9a"
 }
 
 variable "associate_public_ip_address" {
