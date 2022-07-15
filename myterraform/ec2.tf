@@ -21,9 +21,6 @@ resource "aws_instance" "ec2demo" {
   associate_public_ip_address = var.associate_public_ip_address
   private_ip                  = var.private_ip
   secondary_private_ips       = var.secondary_private_ips
-  ipv6_address_count          = var.ipv6_address_count
-  ipv6_addresses              = var.ipv6_addresses
-
   ebs_optimized = var.ebs_optimized
 
   dynamic "capacity_reservation_specification" {
