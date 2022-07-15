@@ -13,7 +13,7 @@ variable "name" {
 variable "ami" {
   description = "ID of AMI to use for the instance"
   type        = string
-  default     = "ami-08df646e18b182346"
+  default     = ""
 }
 
 variable "associate_public_ip_address" {
@@ -94,22 +94,10 @@ variable "instance_initiated_shutdown_behavior" {
   default     = null
 }
 
-variable "instance_type" {
+variable "instance_type" {	
   description = "The type of instance to start"
   type        = string
-  default     = "t2.micro"
-}
-
-variable "ipv6_address_count" {
-  description = "A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet"
-  type        = number
-  default     = null
-}
-
-variable "ipv6_addresses" {
-  description = "Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface"
-  type        = list(string)
-  default     = null
+  default     = ""
 }
 
 variable "key_name" {
@@ -200,12 +188,6 @@ variable "user_data_base64" {
   description = "Can be used instead of user_data to pass base64-encoded binary data directly. Use this instead of user_data whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption."
   type        = string
   default     = null
-}
-
-variable "user_data_replace_on_change" {
-  description = "When used in combination with user_data or user_data_base64 will trigger a destroy and recreate when set to true. Defaults to false if not set."
-  type        = bool
-  default     = false
 }
 
 variable "volume_tags" {
