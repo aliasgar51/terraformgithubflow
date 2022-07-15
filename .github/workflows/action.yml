@@ -10,7 +10,7 @@ on:
        branches: [main]
 jobs:
   deploy:
-    name: Upload to Amazon S3
+    name: Github workflow for terraform scripts
     runs-on: ubuntu-latest
     # These permissions are needed to interact with GitHub's OIDC Token endpoint.
     permissions:
