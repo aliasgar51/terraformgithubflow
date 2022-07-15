@@ -13,7 +13,7 @@ variable "name" {
 variable "ami" {
   description = "ID of AMI to use for the instance"
   type        = string
-  default     = ""
+  default     = "ami-08df646e18b182346"
 }
 
 variable "associate_public_ip_address" {
@@ -97,7 +97,7 @@ variable "instance_initiated_shutdown_behavior" {
 variable "instance_type" {
   description = "The type of instance to start"
   type        = string
-  default     = ""
+  default     = "t2.micro"
 }
 
 variable "ipv6_address_count" {

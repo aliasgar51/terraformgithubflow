@@ -1,8 +1,8 @@
 resource "aws_instance" "ec2demo" {
   
   count = var.create_ec2 ? 1 : 0
-  ami                  = ami-08df646e18b182346
-  instance_type        = t2.micro
+  ami                  = var.ami
+  instance_type        = var.instance_type
   hibernation          = var.hibernation
 
   user_data                   = var.user_data
